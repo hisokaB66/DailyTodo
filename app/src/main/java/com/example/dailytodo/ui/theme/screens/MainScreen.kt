@@ -2,7 +2,10 @@ package com.example.dailytodo.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Done
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,7 +26,7 @@ fun MainScreen(
 
     Scaffold(
         topBar = {
-            SmallTopAppBar(
+            TopAppBar(
                 title = { Text("DailyTodo") }
             )
         },
@@ -82,7 +85,8 @@ fun BottomNavigationBar(
             selected = false,
             onClick = onCalendarClick,
             label = { Text("캘린더") },
-            icon = { Icon(Icons.Default.CalendarMonth, contentDescription = "캘린더") }
+            icon = { Icon(Icons.Filled.CalendarMonth, contentDescription = null)
+            }
         )
     }
 }
